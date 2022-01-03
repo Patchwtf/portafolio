@@ -1,0 +1,50 @@
+﻿html{
+--heightNav: 70px;
+}
+
+/*FUENTES EXTERNAS A AÑADIR*/
+
+@font-face {
+    font-family: 'KaushanScript-Regular';
+    src: url(fuentes/KaushanScript-Regular.otf) format('opentype');
+}
+
+/*NAV DE LA PAGINA*/
+
+body {
+    background: #e1dfdd;
+    margin: 0px;
+}
+
+nav {
+    background: #102C38;
+    text-align: center;
+    height: var(--heightNav);
+}
+
+ul {
+    color: white;
+    list-style: none;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    height: var(--heightNav);
+    font-family: 'KaushanScript-Regular';
+}
+
+li {
+    float: left;
+    padding: 1rem;
+}
+li a {
+    font-size: 2rem;
+}
+
+li:hover:not(.active) {
+    background: #47C1F5;
+}
+
+.active {
+    background: #4B7574;
+}
