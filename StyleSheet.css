@@ -12,7 +12,7 @@
 /*NAV DE LA PAGINA*/
 
 body {
-    background: #e1dfdd;
+    background: black;
     margin: 0px;
 }
 
@@ -35,10 +35,15 @@ ul {
 
 li {
     float: left;
-    padding: 1rem;
+    padding: 0.4em 1rem 0px 1rem;
+    height: 100%;
+    outline: 1px solid red;
 }
 li a {
     font-size: 2rem;
+    outline: 1px solid red;
+    height: 100%;
+    width: 100%;
 }
 
 li:hover:not(.active) {
@@ -47,4 +52,32 @@ li:hover:not(.active) {
 
 .active {
     background: #4B7574;
+}
+
+/*MAIN de la pagina*/
+
+main {
+  outline: 1px solid red;
+  max-width: 1920px;
+  width: 80%;
+  color: white;
+  margin: 0px auto 0px;
+  background-color: grey;
+}
+
+#stepOne article {
+  position: relative;
+  left: 48px;
+}
+
+#desMe {
+  width: 45%;
+}
+#photoIcon {
+  height: 100px;
+  width: 45%;
+}
+#photoIcon img {
+  max-height: 100%;
+  max-width: 100%;
 }
