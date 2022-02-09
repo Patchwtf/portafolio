@@ -1,43 +1,110 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="StyleSheet.css" type="text/css" />
-    <title>Portafolio virtual</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="StyleSheet.css" type="text/css" />
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="index.js"></script>
+  <title>Portafolio virtual</title>
 </head>
+
 <body>
-    <nav id="menu">
-        <ul>
-            <li class = "active">
-                <a>¿Quien soy yo?</a>
-            </li>
-            <li>
-                <a>Mi formacion academica</a>
-            </li>
-            <li>
-                <a>Proyectos que he trabajado</a>
-            </li>
-            <li>
-                <a>Contacto</a>
-            </li>
-        </ul>
-    </nav>
-    <main>
-      <section id = "stepOne">
-        <article id = "desMe">
-            <h2>¿Quien soy yo?</h2>
-            <p>
-                Me presento, mi nombre es Jhosbyn Daniel Guillèn Ortiz. Actualmente tengo 20 años. <br />
-                Estoy estudiando la carrera de ingenieria en Desarrollo de software en la universidad Tecmilenio, voy en mi Sexto semestre. <br />
-                Actualmente tambien tengo un canal de Twitch en el que trato temas acerca de tecnologia, desarrollo, videojuegos y un poco de la cultura pop.
-            </p>
+  <nav id="menu">
+    <ul>
+      <li class="active">
+        <a href="">¿Quien soy yo?</a>
+      </li>
+      <li>
+        <a href="">Mi formacion academica</a>
+      </li>
+      <li>
+        <a href="">Proyectos que he trabajado</a>
+      </li>
+      <li>
+        <a href="">Contacto</a>
+      </li>
+    </ul>
+  </nav>
+  <section class="fondoZ2">
+    <section class="fondoZ3">
+      <section id="stepOne">
+        <h2>¿Quien soy yo?</h2>
+        <article id="desMe">
+          <p>
+            Me presento, mi nombre es Jhosbyn Daniel Guillén Ortiz. Actualmente tengo 20 años. <br />
+            Estoy estudiando la carrera de ingenieria en Desarrollo de software en la universidad Tecmilenio, voy en mi Sexto semestre. <br />
+            Actualmente tambien tengo un canal de Twitch en el que trato temas acerca de tecnologia, desarrollo, videojuegos y un poco de la cultura pop.
+          </p>
         </article>
-        <article id = "photoIcon">
-          <img src = "images/iconLobo.png"/>
+        <article id="photoIcon">
+          <img src="images/fondo3.jpg" />
         </article>
       </section>
-    </main>
+      <section id="stepTwo">
+        <section id="fondo3">
+          <article id="question">
+            <h2>Proyectos en los que he trabajado</h2>
+          </article>
+          <div id=projectGallery>
+            <ul id="content">
+              <li id="_1"><img src="images/test1.jpg" /></li>
+              <li id="_2"><img src="images/test2.jpg" /></li>
+              <li id="_3"><img src="images/test3.jpg" /></li>
+              <li id="_4"><img src="images/test4.jpg" /></li>
+            </ul>
+            <ul id="navSlide">
+              <li>
+                <a href="#_1">1</a>
+              </li>
+              <li>
+                <a href="#_2">1</a>
+              </li>
+              <li>
+                <a href="#_3">1</a>
+              </li>
+              <li>
+                <a href="#_4">1</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+    </section>
+  </section>
 
+  <footer>
+    <section class="socialNet">
+      <ul>
+        <ol>
+          <li><a href="">Facebook</a></li>
+          <li><img src="images/face.png"></li>
+        </ol>
+        <ol>
+          <li><a href="">Twitter</a></li>
+          <li><img src="images/twit.png"></li>
+        </ol>
+        <ol>
+          <li><a href="">Instagram</a></li>
+          <li><img src="images/instagram.png"></li>
+        </ol>
+        <ol>
+          <li><a href="">Twitch</a></li>
+          <li><img src="images/twitch.png"></li>
+        </ol>
+        <ol>
+          <li><a href="">LinkedIn</a></li>
+          <li><img src="images/linked.png"></li>
+        </ol>
+      </ul>
+    </section>
+    <section class="datos">
+      <p>2022© Portafolio Virtual. Diseñada por Patch Darko</p>
+    </section>
+  </footer>
 </body>
+
 </html>
