@@ -1,4 +1,4 @@
-html {
+dup {
   --heightNav: 70px;
   --heightImgGal: 100px;
   --heightMain: 795px;
@@ -6,115 +6,119 @@ html {
 
 /*FUENTES EXTERNAS A AÑADIR*/
 @font-face {
-  font-family: 'KaushanScript-Regular';
-  src: url(fuentes/KaushanScript-Regular.otf) format('opentype');
+  font-family: "KaushanScript-Regular";
+  src: url(../fonts/KaushanScript-Regular.otf) format("opentype");
 }
 
 @font-face {
-  font-family: 'Azonix';
-  src: url(fuentes/Azonix.otf) format('opentype');
+  font-family: "Azonix";
+  src: url(../fonts/Azonix.otf) format("opentype");
 }
 
 @font-face {
-  font-family: 'Oxygen';
-  src: url(fuentes/Oxygen-Regular) format('opentype');
+  font-family: "Oxygen";
+  src: url(../fonts/Oxygen-Regular) format("opentype");
 }
 
-a {
-  text-decoration: none;
-}
+/*General*/
 
-/*NAV DE LA PAGINA*/
-body {
+body,
+.bg-one {
   margin: 0px;
   height: 100%;
   min-height: 100vh;
-  background-image: url("images/fondo2.jpg");
+  background-image: url("../images/fondo2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
 
-nav {
-  background: #102C38;
+html a {
+  text-decoration: none;
+}
+
+/*NAV DE LA PAGINA*/
+
+.main-nav {
+  background: #102c38;
   text-align: center;
   height: var(--heightNav);
+  display: flex;
+  flex-direction: row;
+  padding: 0 0.5rem;
 }
 
-nav ul {
-  list-style: none;
-  overflow: hidden;
-  margin: 0px;
-  padding: 0px;
-  display: inline-block;
-  height: var(--heightNav);
-  font-family: 'KaushanScript-Regular';
-}
-
-nav li {
-  float: left;
-  padding: 0.4em 1rem 0px 1rem;
-  height: 100%;
-}
-
-nav li a {
+.main-nav a {
+  margin: auto;
+  padding: 1.5rem;
   font-size: 2rem;
-  height: 100%;
-  width: 100%;
   color: white;
+  font-family: "KaushanScript-Regular";
 }
 
-nav li:hover:not(.active) {
-  background: #47C1F5;
+.main-nav a:hover {
+  background: #4b7574;
 }
 
-.active {
-  background: #4B7574;
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+  }
+  .main-nav a {
+    padding: 0.3rem 0;
+    margin: 0;
+    width: auto;
+    font-size: 1.5rem;
+  }
 }
 
-/*MAIN de la pagina*/
-#stepOne article {
-  font-family: 'KaushanScript-Regular';
+/*Contenido*/
+.descrive-me article {
+  font-family: "KaushanScript-Regular";
   font-size: 2rem;
 }
 
-.fondoZ2 {
-  background-image: url("images/aves.png");
+.bg-up-one {
+  background-image: url("../images/aves.png");
   background-position: top;
   background-repeat: repeat-x;
 }
 
-.fondoZ3 {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1) 90%);
+.main-content {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 90%
+  );
   color: white;
 }
 
-section#stepOne h2 {
+.descrive-me h2 {
   padding-top: 35vh;
   margin-top: 0;
   text-align: center;
-  font-family: 'KaushanScript-Regular';
+  font-family: "KaushanScript-Regular";
   font-size: 7em;
   position: relative;
 }
 
-section#stepOne article {
+.descrive-me article {
   margin: 0 auto;
   font-size: 4.3vh;
   text-align: justify;
   opacity: 0;
 }
 
-section#stepOne p {
+.descrive-me p {
   margin-bottom: 20vh;
 }
 
-#stepOne {
+.descrive-me {
   min-height: 875px;
 }
 
-#desMe {
+.text-me {
   text-align: center;
   width: 80%;
 }
@@ -133,10 +137,10 @@ section#stepOne p {
   position: relative;
 }
 
-#photoIcon img:hover, #photoIcon:hover img {
-  -webkit-transition-duration: 1s;
+#photoIcon img:hover,
+#photoIcon:hover img {
   transition: all 1s ease-in-out;
-  -webkit-transform: scale(1.1);
+
   transform: scale(1.1);
 }
 
@@ -149,7 +153,8 @@ section#stepOne p {
   text-align: center;
 }
 
-#projectGallery ul, li {
+#projectGallery ul,
+li {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -166,8 +171,6 @@ ul#content {
   width: 100%;
   height: var(--heightImgGal);
 }
-
-ul#navSlide {}
 
 ul#content li {
   position: absolute;
@@ -200,7 +203,6 @@ footer {
 section.socialNet ul {
   display: block ruby;
   margin: 0px auto;
-  q
 }
 
 section.socialNet li {

@@ -14,10 +14,10 @@ $(document).ready(function() {
     $('h2').css({
       'top': '-' + p2 + 'px'
     });
-    $('section#stepOne article').css({
+    $('section.descrive-me article').css({
       'opacity': op
     });
-    $('section#stepOne photoIcon').css({
+    $('section.descrive-me photoIcon').css({
       'top': p2+'px'
     });
     console.log(barra);
