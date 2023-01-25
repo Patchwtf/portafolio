@@ -14,12 +14,16 @@ $(document).ready(function() {
     $('h2').css({
       'top': '-' + p2 + 'px'
     });
-    $('section.descrive-me article').css({
+    $('section.descrive-me .text-me').css({
       'opacity': op
     });
-    $('section.descrive-me photoIcon').css({
+    $('section.descrive-me .photo-icon').css({
       'top': p2+'px'
     });
+    $('.bg-up-one').css({
+      'background-position': '0 +' + (barra * 0.5)+'px'
+    });
+    
     console.log(barra);
   });
 });
