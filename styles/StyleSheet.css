@@ -20,6 +20,15 @@ dup {
   src: url(../fonts/Oxygen-Regular.ttf) format("opentype");
 }
 
+/* Scroll Snap */
+
+html{scroll-snap-type: y mandatory;}
+
+.main-nav, .descrive-me p, .work-gallery .gallery-grid{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
 /*General*/
 
 body,
@@ -35,6 +44,7 @@ body,
 
 html a {
   text-decoration: none;
+
 }
 
 h2 {
@@ -128,8 +138,9 @@ h2 {
 }
 
 .work-gallery h2 {
+  margin-top: auto;
   font-size: 3.5rem;
-  color: whitesmoke;
+  color: rgb(0, 0, 0);
 }
 
 .gallery-grid {
@@ -174,5 +185,7 @@ footer {
   text-align: center;
   width: 100%;
   bottom: 0px;
-  position: relative;
+}
+.footer{padding: .5rem; margin-top: .5rem;}
+footer p {margin: auto;
 }
