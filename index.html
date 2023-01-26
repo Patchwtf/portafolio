@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href="/styles/StyleSheet.css" as="style" />
     <link rel="stylesheet" href="/styles/StyleSheet.css" type="text/css" />
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="/index.js"></script>
@@ -11,50 +12,97 @@
   </head>
 
   <body class="bg-one">
-    <nav class="main-nav">
-      <a href="">¿Quien soy yo?</a>
+    <section class="cortina">
+      <nav class="main-nav">
+        <a href="#question">¿Quien soy yo?</a>
 
-      <a href="">Proyectos que he trabajado</a>
+        <a href="#gallery">Proyectos que he trabajado</a>
 
-      <a href="">Contacto</a>
-    </nav>
-    <section class="bg-up-one">
-      <section class="main-content">
-        <section class="descrive-me">
-          <h2>¿Quien soy yo?</h2>
-          <article class="text-me">
-            <p>
-              Me presento, mi nombre es Jhosbyn Daniel Guillén Ortiz.
-              Actualmente tengo 21 años y soy Mexicano. <br />
-              Soy Ingeniero en Desarrollo de Software de la Universidad
-              Tecmilenio.
-              <br />
-              Me gusta el desarrollo web y de aplicaciones moviles. Encajo
-              perfecto en cualquier ecosistema de trabajo y me dapto de una
-              manera impecable.
-            </p>
-          </article>
-        </section>
-        <!-- descrive-me -->
-        <section class="work-gallery">
-          <h2>Proyectos en los que he trabajado</h2>
-          <section class="gallery-grid">
-            <p>Pagina Freelancer</p>
-            <p>Repositorios de GitHub</p>
-            <div class="preview">
-              <img src="/images/DSC06086.JPG" />
-            </div>
-            <div class="preview"><img src="/images/DSC06143.JPG" /></div>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <section class="bg-up-one">
+        <section class="main-content">
+          <section class="descrive-me">
+            <h2>¿Quien soy yo?</h2>
+            <article class="text-me" id="question">
+              <p>
+                Me presento, mi nombre es Jhosbyn Daniel Guillén Ortiz.
+                Actualmente tengo 21 años y soy Mexicano. <br />
+                Soy Ingeniero en Desarrollo de Software de la Universidad
+                Tecmilenio.
+                <br />
+                Me gusta el desarrollo web y de aplicaciones moviles. Encajo
+                perfecto en cualquier ecosistema de trabajo y me dapto de una
+                manera impecable.
+              </p>
+            </article>
           </section>
+          <!-- descrive-me -->
+          <section class="work-gallery">
+            <h2 id="gallery">Proyectos en los que he trabajado</h2>
+            <section class="gallery-grid">
+              <p class="order">Pagina Freelancer</p>
+              <p class="order">Repositorios de GitHub</p>
+              <div class="preview order">
+                <img src="/images/freelancer-capture.png" />
+              </div>
+              <div class="preview order">
+                <img src="/images/github-profile-capture.png" />
+              </div>
+            </section>
+          </section>
+          <!-- work-gallery -->
         </section>
-        <!-- work-gallery -->
+        <!-- main-content -->
       </section>
-      <!-- main-content -->
-    </section>
-    <!-- bg-up-one -->
+      <!-- bg-up-one -->
+      <section class="contact">
+        <h2 id="contacto">Contacto</h2>
+        <form action="" class="formulario">
+          <fieldset>
+            <legend>Contactame llenando los siguientes campos</legend>
+            <div class="contenedor-campos">
+              <div class="campo">
+                <label>Nombre</label>
+                <input type="text" placeholder="Ingrese su nombre aquí" />
+              </div>
 
+              <div class="campo">
+                <label>Telefono</label>
+                <input
+                  type="tel"
+                  placeholder="Ingrese su numero celular aquí" />
+              </div>
+
+              <div class="campo">
+                <label>Correo</label>
+                <input type="email" placeholder="Ingrese su correo aquí" />
+              </div>
+              <div class="campo">
+                <label>Mensaje</label><textarea></textarea>
+              </div>
+            </div>
+            <!-- Contenedor campos -->
+
+            <input type="submit" value="Enviar" class="button w-sm-100" />
+          </fieldset>
+        </form>
+      </section>
+    </section>
+    <!-- cortina -->
     <footer>
-      <section class="footer"><p>2022© Portafolio Virtual. Diseñada por Jhosbyn Daniel Guillén Ortiz</p></section>
+      <section class="footer">
+        <p>
+          2022© Portafolio Virtual. Todos los derechos reservados. Jhosbyn
+          Daniel Guillen Ortiz
+        </p>
+        <section class="social-media">
+          <img src="/images/linked-icon.png" />
+          <img src="/images/instagram-icon.png" />
+          <img src="/images/github-icon-white.png" />
+        </section>
+      </section>
     </footer>
   </body>
 </html>
