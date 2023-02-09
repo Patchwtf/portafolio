@@ -1,4 +1,4 @@
-jQuery(document).ready(function () {
+document.ready(function () {
   $(window).scroll(function () {
     var barra = $(window).scrollTop();
     var posicion;
