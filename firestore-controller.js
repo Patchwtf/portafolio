@@ -2,7 +2,7 @@ const db = firebase.firestore();
 
 const contactForm = document.querySelector(".formulario");
 
-contactForm.addEventListener("submit", (e) => {
+contactForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const name = contactForm["user-name"].value;
   const phone = contactForm["user-phone"].value;
@@ -12,7 +12,10 @@ contactForm.addEventListener("submit", (e) => {
   var now = today.toLocaleString();
 
   if (name != "" && phone != "" && mail != "" && message != "") {
-    db.collection("clientes").doc().set({ name, phone, mail, message, now });
+    await db
+      .collection("clientes")
+      .doc()
+      .set({ name, phone, mail, message, now });
     contactForm.reset();
   } else {
     alert("No se pueden enviar los datos si algun campo esta vacío");
