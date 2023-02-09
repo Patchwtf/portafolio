@@ -7,28 +7,6 @@
     <link rel="preload" href="/styles/StyleSheet.css" as="style" />
     <link rel="stylesheet" href="/styles/StyleSheet.css" type="text/css" />
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <!-- $ Firestore Connection -->
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyDtt1s0kwDSzBtqSMIkme9GifgkM4lK8hM",
-        authDomain: "portafolio-d0929.firebaseapp.com",
-        projectId: "portafolio-d0929",
-        storageBucket: "portafolio-d0929.appspot.com",
-        messagingSenderId: "662366085597",
-        appId: "1:662366085597:web:e8265776bfdf98c078d634",
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-    </script>
-    <!-- $ FIrestore JS -->
-    <script src="/firestore-controller.js"></script>
     <script src="/index.js"></script>
     <title>Portafolio virtual</title>
   </head>
@@ -98,6 +76,7 @@
               <div class="campo">
                 <label>Nombre</label>
                 <input
+                  required
                   type="text"
                   placeholder="Ingrese su nombre aquí"
                   id="user-name" />
@@ -106,16 +85,24 @@
               <div class="campo">
                 <label>Telefono</label>
                 <input
+                  required
                   type="tel"
-                  placeholder="Ingrese su numero celular aquí" />
+                  placeholder="Ingrese su numero celular aquí"
+                  id="user-phone"
+                  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
               </div>
 
               <div class="campo">
                 <label>Correo</label>
-                <input type="email" placeholder="Ingrese su correo aquí" />
+                <input
+                  required
+                  type="email"
+                  placeholder="Ingrese su correo aquí"
+                  id="user-mail" />
               </div>
               <div class="campo">
-                <label>Mensaje</label><textarea></textarea>
+                <label>Mensaje</label
+                ><textarea id="user-message" required></textarea>
               </div>
             </div>
             <!-- Contenedor campos -->
@@ -125,7 +112,6 @@
               type="submit"
               value="Enviar"
               class="button w-sm-100" />
-            <button>Hola Mundo</button>
           </fieldset>
         </form>
       </section>
@@ -159,5 +145,28 @@
         </section>
       </section>
     </footer>
+    <!-- $ Firestore Connection -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script>
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDtt1s0kwDSzBtqSMIkme9GifgkM4lK8hM",
+        authDomain: "portafolio-d0929.firebaseapp.com",
+        projectId: "portafolio-d0929",
+        storageBucket: "portafolio-d0929.appspot.com",
+        messagingSenderId: "662366085597",
+        appId: "1:662366085597:web:e8265776bfdf98c078d634",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- $ FIrestore JS -->
+    <script src="/firestore-controller.js"></script>
   </body>
 </html>
