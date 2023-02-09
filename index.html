@@ -7,6 +7,28 @@
     <link rel="preload" href="/styles/StyleSheet.css" as="style" />
     <link rel="stylesheet" href="/styles/StyleSheet.css" type="text/css" />
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- $ Firestore Connection -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDtt1s0kwDSzBtqSMIkme9GifgkM4lK8hM",
+        authDomain: "portafolio-d0929.firebaseapp.com",
+        projectId: "portafolio-d0929",
+        storageBucket: "portafolio-d0929.appspot.com",
+        messagingSenderId: "662366085597",
+        appId: "1:662366085597:web:e8265776bfdf98c078d634",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
+    <!-- $ FIrestore JS -->
+    <script src="/firestore-controller.js"></script>
     <script src="/index.js"></script>
     <title>Portafolio virtual</title>
   </head>
@@ -45,10 +67,20 @@
               <p class="order">Pagina Freelancer</p>
               <p class="order">Repositorios de GitHub</p>
               <div class="preview order">
-                <img src="/images/freelancer-capture.png" />
+                <a
+                  href="https://first-web-project-darko.netlify.app"
+                  target="_blank"
+                  rel="noreferrer noopener">
+                  <img src="/images/freelancer-capture.png" />
+                </a>
               </div>
               <div class="preview order">
-                <img src="/images/github-profile-capture.png" />
+                <a
+                  href="https://github.com/Patchwtf/"
+                  target="_blank"
+                  rel="noreferrer noopener">
+                  <img src="/images/github-profile-capture.png" />
+                </a>
               </div>
             </section>
           </section>
@@ -59,13 +91,16 @@
       <!-- bg-up-one -->
       <section class="contact">
         <h2 id="contacto">Contacto</h2>
-        <form action="" class="formulario">
+        <form class="formulario" id="contact-form">
           <fieldset>
             <legend>Contactame llenando los siguientes campos</legend>
             <div class="contenedor-campos">
               <div class="campo">
                 <label>Nombre</label>
-                <input type="text" placeholder="Ingrese su nombre aquí" />
+                <input
+                  type="text"
+                  placeholder="Ingrese su nombre aquí"
+                  id="user-name" />
               </div>
 
               <div class="campo">
@@ -85,7 +120,12 @@
             </div>
             <!-- Contenedor campos -->
 
-            <input type="submit" value="Enviar" class="button w-sm-100" />
+            <input
+              name="Submit"
+              type="submit"
+              value="Enviar"
+              class="button w-sm-100" />
+            <button>Hola Mundo</button>
           </fieldset>
         </form>
       </section>
@@ -98,9 +138,24 @@
           Daniel Guillen Ortiz
         </p>
         <section class="social-media">
-          <img src="/images/linked-icon.png" />
-          <img src="/images/instagram-icon.png" />
-          <img src="/images/github-icon-white.png" />
+          <a
+            href="https://www.linkedin.com/in/jhosbyn-daniel-guillén-ortiz-a0b28a191/"
+            target="_blank"
+            rel="noreferrer noopener">
+            <img src="/images/linked-icon.png" />
+          </a>
+          <a
+            href="https://www.instagram.com/patch_wtf/"
+            target="_blank"
+            rel="noreferrer noopener">
+            <img src="/images/instagram-icon.png" />
+          </a>
+          <a
+            href="https://github.com/Patchwtf/"
+            target="_blank"
+            rel="noreferrer noopener">
+            <img src="/images/github-icon-white.png" />
+          </a>
         </section>
       </section>
     </footer>
