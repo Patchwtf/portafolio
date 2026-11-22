@@ -1,0 +1,110 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 48px 60px;
+    position: relative;
+    &__container {
+        max-width: var(--max-width);
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.35fr 0.65fr;
+        gap: 80px;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    &__role {
+        margin-bottom: 30px;
+        font-family: var(--font-mono);
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+    }
+    &__name {
+        margin-bottom: 20px;
+        font-size: clamp(3rem, 6vw, 5.5rem);
+        line-height: 0.95;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        span {
+            display: block;
+        }
+    }
+    &__specialization {
+        margin-bottom: 30px;
+        font-family: var(--font-mono);
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+    }
+    &__description {
+        max-width: 650px;
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: var(--text-secondary);
+    }
+    &__links {
+        margin-top: 40px;
+        display: flex;
+        gap: 30px;
+        a {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            text-decoration: none;
+            color: var(--text-secondary);
+            transition: color 0.2s ease, transform 0.2s ease;
+            &:hover {
+                color: var(--text-primary);
+                border-color: var(--text-secondary);
+                transform: translateY(-3px);
+            }
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    &__image {
+        width: 320px;
+        justify-content: center;
+        align-items: center;
+    }
+    &__photo-placeholder {
+        width: 320px;
+        aspect-ratio: 4/5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        color: var(--text-muted);
+        font-family: var(--font-mono);
+        border-radius: 18px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+        padding: 120px 24px 100px;
+        &__container {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+        &__photo {
+            display: flex;
+            justify-content: center;
+            order: -1;
+        }
+        &__photo-placeholder {
+            width: 220px;
+        }
+        &__name {
+            font-size: clamp( 2.8rem, 11vw, 4.5rem);
+        }
+    }
+}

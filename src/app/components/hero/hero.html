@@ -1,7 +1,29 @@
-<section>
-    <h1>Jhosbyn Daniel Guillén Ortiz</h1>
-
-    <p>
-        Software Engineer · Cybersecurity Engineer
-    </p>
+<section class="hero" id="inicio">
+    <div class="hero__container">
+        <div class="hero__content">
+            <p class="hero__role">{{ languageService.text().hero.role }}</p>
+            <h1 class="hero__name">Jhosbyn Daniel <span>Guillén Ortiz</span></h1>
+            <p class="hero__specialization">{{ languageService.text().hero.specialization }}</p>
+            <p class="hero__description">{{ languageService.text().hero.description }}</p>
+            <p class="hero__phrase">{{ languageService.text().hero.phrase }}</p>
+            <div class="hero__links">
+                @for (link of socialLinks; track link.name) {
+                <a [href]="link.url" target="_blank" rel="noopener noreferrer" [aria-label]="link.name">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            fill="currentColor"
+                            [attr.d]="link.svg"
+                        />
+                    </svg>
+                </a> }
+            </div>
+        </div>
+        <div class="hero__photo">
+            <div class="hero__photo-placeholder">FOTO</div>
+        </div>
+    </div>
+    <a class="hero__scroll" href="#experiencia">
+        <span>{{ languageService.text().hero.experienceButton }}</span>
+        <span class="hero__arrow">↓</span>
+    </a>
 </section>

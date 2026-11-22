@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { Hero } from './components/hero/hero';
+import { Navbar } from './components/navbar/navbar';
+import { LanguageToggle } from './components/language-toggle/language-toggle';
 
 @Component({
   selector: 'app-root',
-  imports:[Hero],
+  imports:[Hero, Navbar, LanguageToggle],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
