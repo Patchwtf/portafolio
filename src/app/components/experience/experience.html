@@ -1,0 +1,25 @@
+<section class="experience" id="experiencia">
+
+    <div class="experience__container">
+
+        <h2 class="experience__title">
+            02 — {{ languageService.text().experience.title }}
+        </h2>
+
+        <div class="experience__divider"></div>
+
+        <div class="experience__list">
+
+            @for (item of experiences(); track item.id) {
+
+            <app-experience-card [experience]="item" /> }
+
+        </div>
+
+        <a class="experience__scroll" href="#proyectos">
+      {{ languageService.text().experience.nextSection }}
+      <span>↓</span>
+    </a>
+    </div>
+
+</section>
