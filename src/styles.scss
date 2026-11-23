@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+:root {
+    --background: #0b1218;
+    --surface: #101922;
+    --border: #26323d;
+    --text-primary: #f2f4f5;
+    --text-secondary: #a6afb7;
+    --text-muted: #6f7a84;
+    --font-primary: 'Space Grotesk', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --max-width: 1150px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #0b1218;
+    color: #f5f5f5;
+    font-family: 'Space Grotesk', sans-serif;
+}

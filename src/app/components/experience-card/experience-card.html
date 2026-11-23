@@ -1,0 +1,36 @@
+<article class="experience-card">
+
+    <div class="experience-card__info">
+
+        <h3>{{ experience().company }}</h3>
+
+        <p class="experience-card__role">
+            {{ experience().role }}
+        </p>
+
+        <p class="experience-card__period">
+            {{ experience().period }}
+        </p>
+
+    </div>
+
+    <div class="experience-card__details">
+
+        <h4>Principales actividades</h4>
+
+        <ul>
+            @for (activity of experience().activities; track $index) {
+            <li>{{ activity }}</li>
+            }
+        </ul>
+
+        <div class="experience-card__technologies">
+
+            @for (technology of experience().technologies; track technology) {
+            <span>{{ technology }}</span> }
+
+        </div>
+
+    </div>
+
+</article>

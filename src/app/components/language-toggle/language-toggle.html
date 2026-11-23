@@ -1,0 +1,19 @@
+<button class="language-toggle" type="button" (click)="languageService.toggleLanguage()" [attr.aria-label]="
+    languageService.isSpanish()
+      ? 'Switch to English'
+      : 'Cambiar a español'
+  ">
+  <span
+    [class.active]="languageService.isSpanish()"
+  >
+    ESP
+  </span>
+
+  <span class="separator">/</span>
+
+  <span
+    [class.active]="!languageService.isSpanish()"
+  >
+    EN
+  </span>
+</button>
