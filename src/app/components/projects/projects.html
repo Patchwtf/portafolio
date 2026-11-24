@@ -1,0 +1,26 @@
+<section class="projects" id="proyectos">
+
+    <div class="projects__container">
+
+        <h2 class="projects__title">
+            03 — {{ languageService.text().projects.title }}
+        </h2>
+
+        <div class="projects__divider"></div>
+
+        <div class="projects__grid">
+
+            @for (project of projects(); track project.id) {
+
+            <app-project-card [project]="project" [githubLabel]="languageService.text().projects.githubLabel" [demoLabel]="languageService.text().projects.demoLabel" /> }
+
+        </div>
+
+        <a class="projects__scroll" href="#certificaciones">
+      {{ languageService.text().projects.nextSection }}
+      <span>↓</span>
+    </a>
+
+    </div>
+
+</section>

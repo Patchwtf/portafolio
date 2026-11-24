@@ -1,0 +1,54 @@
+<article class="project-card">
+
+    <div class="project-card__image">
+
+        @if (project().image) {
+
+        <img [src]="project().image" [alt]="project().title" loading="lazy" /> } @else {
+
+        <div class="project-card__placeholder">
+            <span>{{ project().title }}</span>
+        </div>
+
+        }
+
+    </div>
+
+    <div class="project-card__body">
+
+        <div class="project-card__heading">
+            <h3>{{ project().title }}</h3>
+
+            <span class="project-card__year">
+        {{ project().year }}
+      </span>
+        </div>
+
+        <p class="project-card__description">
+            {{ project().description }}
+        </p>
+
+        <div class="project-card__technologies">
+
+            @for ( technology of project().technologies; track technology ) {
+            <span>{{ technology }}</span> }
+
+        </div>
+
+        <div class="project-card__links">
+
+            @if (project().githubUrl) {
+
+            <a [href]="project().githubUrl" target="_blank" rel="noopener noreferrer">
+          {{ githubLabel() }} ↗
+        </a> } @if (project().demoUrl) {
+
+            <a [href]="project().demoUrl" target="_blank" rel="noopener noreferrer">
+          {{ demoLabel() }} ↗
+        </a> }
+
+        </div>
+
+    </div>
+
+</article>
